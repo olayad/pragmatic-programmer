@@ -1,4 +1,4 @@
-## Exercise 3
+## Exercise 4, page 64
 
 We want to implement a mini-language to control a simple turtle graphics system. 
 The language consist of single-letter commands, some followed by a single number.
