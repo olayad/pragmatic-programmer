@@ -33,7 +33,11 @@ function processInput(input) {
     // TODO: input should be converted to upper case before split
     input = input.toUpperCase().split(" ");
     if (instruction[input[0]]){
-        console.log("instruction found!");
+        if (instruction[input[0]]["hasArg"]) {
+            console.log("Found and has args")
+        } else{
+            console.log("Found, NO args")
+        }
     } else{
         console.log(" could not find instruction :(");
     }
