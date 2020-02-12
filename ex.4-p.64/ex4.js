@@ -5,7 +5,7 @@ var rl = readline.createInterface({
  output: process.stdout
 });
 
-var input = {
+var instruction = {
     "P": {"hasArg": true},
     "D": {"hasArg": false},
     "U": {"hasArg": false},
@@ -21,7 +21,6 @@ var waitForUserInput = function() {
     if (answer == "exit"){
         rl.close();
     } else {
-        console.log("user said: ", answer);
         processInput(answer);
         waitForUserInput();
     }
@@ -32,13 +31,11 @@ waitForUserInput();
 
 function processInput(input) {
     // TODO: input should be converted to upper case before split
-    // splitted = input.split(" ");
-    // console.log("typeof splitted: ", typeof splitted[0])
-    // console.log("splitted: ", splitted[0]);
-    // console.log("type splitted :", typeof input[splitted[0]]);
-    if (input[splitted[0].toUpperCase()]){
-//         console.log("instruction found!");
-//     } else{
-//         console.log(" could not find instruction :(");
-//     }
-// }
+    input = input.toUpperCase().split(" ");
+    if (instruction[input[0]]){
+        console.log("instruction found!");
+    } else{
+        console.log(" could not find instruction :(");
+    }
+}
+
