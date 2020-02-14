@@ -42,9 +42,9 @@ const VALID_WITH_ARGS = 2;
 
 function processInput(input) {
     input = input.toUpperCase().split(" ");
-    let instuctionType = isValidInstruction(input);
-    if (instuctionType){
-        executeInstruction(input, instuctionType)
+    let instructionType = isValidInstruction(input);
+    if (instructionType){
+        executeInstruction(input, instructionType)
     } else{
         console.log("[Error] Could not execute instruction :( ");
     }
