@@ -9,16 +9,15 @@ All of the following should be accepted;
 -------
 
 ```
- <time> ::= <digit-tens><digit><meridem>    | 
-            <digit><meridiem>
-            <digit-tens><digit><colon><min-tens><digit><meridiem> |
-            <digit-tens><digit><colon><min-tens><digit>   |
-            <digit><colon><min-tens><digit>   |
-            <digit><colon><min-tens><digit><meridiem>
-
-
-<digit-tens>    ::= 0 | 1
-<digit>         ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+ <time> ::= <hour><meridian>    |
+            <hour><colon><minute><meridian> |
+            <hour><colon><minute>   |
+         
+<hour>          ::= <hour-tens><digit>
+<hour-tens>     ::= 0 | 1 | 2
+<digit>         ::= 0 | 1 | 2 | ... | 8 | 9
+<minute>        ::= <minute-tens><digit>
+<minute-tens>   ::= 0 | 1 | 2 | ... | 4 | 5
+<colon>         ::= :
 <meridiem>      ::= am | pm
-<min-tens>      ::= 0 | 1 | 2 | 3 | 4 | 5 
 ```
